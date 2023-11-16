@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Menu de exercicios   </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Exercicios
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="forumario1.html">Exibidor de numeros pares</a></li>
+                    <li><a class="dropdown-item" href="formulario2.html">Conversor de temperatura</a></li>
+                    <li><a class="dropdown-item" href="formulario3.html">Calculadora de vendas</a></li>
+                    <li><a class="dropdown-item" href="formulario4.html">Calculadora de gasto de combustivel</a></li>
+                    <li><a class="dropdown-item" href="formulario5.html">Assentadora de piso</a></li>
+                    <li><a class="dropdown-item" href="formulario6.html">Calculadora de peso ideal</a></li>
+                    <li><a class="dropdown-item" href="formulario7.html">Armazenador de valores</a></li>
+                    <li><a class="dropdown-item" href="jogo.html">Jogo</a></li>
+                  
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" t ype="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+        
+    <title>Exibir Números Pares</title>
+</head>
+<body>
+    <h1>Exibir Números Pares</h1>
+    <p>Informe o valor máximo:</p>
+    <input type="number" id="maxValue">
+    <button onclick="exibirNumerosPares()">Exibir</button>
+    <p>Números Pares:</p>
+    <div id="resultado"></div>
+
+    <script>
+        function exibirNumerosPares() {
+          
+            const numero = parseInt(document.getElementById('maxValue').value);
+
+          
+            if (isNaN(numero)) {
+                alert('Insira um numero valido');
+                return;
+            }
+
+           
+            document.getElementById('resultado').innerHTML = '';
+
+            for (let i = 0; i <= numero; i += 2) {
+                document.getElementById('resultado').innerHTML += i + ' ';
+            }
+        }
+    </script>
+</body>
+</html>
